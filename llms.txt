@@ -1,0 +1,51 @@
+# ScanLens - Document Scanner App for iPhone
+
+> ScanLens is a mobile document scanning application that converts your iPhone camera into a powerful PDF scanner with AI-powered OCR text recognition.
+
+## About ScanLens
+
+ScanLens is the #1 document scanner app for iPhone, rated 4.9 stars on the App Store with over 45,000 reviews. The app enables users to scan documents to PDF using their phone camera, extract text with OCR in 50+ languages, sign PDFs digitally, and sync across devices via iCloud.
+
+## Key Features
+
+- **Camera Scanner to PDF**: Auto-edge detection, perspective correction, image enhancement
+- **OCR Text Recognition**: 99.5% accuracy in 50+ languages, including handwritten notes
+- **E-Signature & PDF Signing**: Legally valid electronic signatures for contracts and forms
+- **PDF Editor**: Annotate, highlight, merge PDFs, rearrange pages
+- **Cloud Sync**: iCloud, Google Drive, Dropbox, OneDrive integration
+
+## Pricing
+
+- **Free Plan**: 10 scans/month, basic OCR, PDF export
+- **Pro Plan**: $4.99/month - Unlimited scans, advanced OCR, e-signatures, 5GB cloud storage
+- **Business Plan**: $12.99/month - Everything in Pro, unlimited storage, team collaboration, API access
+
+## Company
+
+ScanLens is developed by BITFORGE PTE. LTD., a software company headquartered in Singapore.
+
+**Contact**: support@bitforge.cloud
+**Website**: https://scanlens.io
+
+## Target Keywords
+
+- document scanner app
+- PDF scanner
+- camera scanner
+- phone scanner
+- scan to PDF
+- OCR app
+- text recognition app
+- mobile scanner
+- iPhone scanner
+- e-signature app
+
+## Pages
+
+- Home: https://scanlens.io/
+- Privacy Policy: https://scanlens.io/privacy.html
+- Terms of Service: https://scanlens.io/terms.html
+
+## Download
+
+- App Store: https://apps.apple.com/app/scanlens
