@@ -64,7 +64,7 @@ function initMobileNavigation() {
             <a href="#features">Features</a>
             <a href="#how-it-works">How it Works</a>
             <a href="#pricing">Pricing</a>
-            <a href="#" class="nav-btn-primary">Download App</a>
+            <a href="https://apps.apple.com/app/scanlens" class="nav-btn-primary">Download App</a>
         </div>
     `;
 
