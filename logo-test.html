@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScanLens Logo Variants</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@700;800&family=Outfit:wght@700;800&family=Space+Grotesk:wght@700&family=Sora:wght@700;800&family=DM+Sans:wght@700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -29,13 +26,16 @@
         .variant {
             background: white;
             border-radius: 16px;
-            padding: 32px;
+            padding: 40px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .variant-label {
             font-size: 12px;
             color: #86868b;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -45,213 +45,276 @@
             gap: 12px;
         }
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
         }
-        .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1d1d1f;
-        }
-        .logo-text .accent {
-            color: #0071E3;
-        }
-        .logo-text.gradient {
-            background: linear-gradient(135deg, #1d1d1f 40%, #0071E3 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Font variants */
-        .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .font-inter { font-family: 'Inter', sans-serif; }
-        .font-outfit { font-family: 'Outfit', sans-serif; }
-        .font-space { font-family: 'Space Grotesk', sans-serif; }
-        .font-sora { font-family: 'Sora', sans-serif; }
-        .font-dm { font-family: 'DM Sans', sans-serif; }
-        .font-manrope { font-family: 'Manrope', sans-serif; }
-
-        .weight-800 { font-weight: 800; }
-
-        /* Special styles */
-        .tracking-tight { letter-spacing: -0.03em; }
-        .tracking-wide { letter-spacing: 0.02em; }
-
-        /* SVG wordmark styles */
-        .svg-wordmark {
-            height: 28px;
+        .wordmark {
+            height: 32px;
             width: auto;
         }
-
-        .divider {
-            grid-column: span 2;
-            text-align: center;
-            padding: 20px;
+        .variant.dark {
+            background: #1d1d1f;
+        }
+        .variant.dark .variant-label {
             color: #86868b;
-            font-size: 14px;
-            border-top: 1px solid #e5e5e5;
-            margin-top: 16px;
+        }
+        @keyframes scanLine {
+            0%, 100% { transform: translateX(-100%); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(100%); opacity: 0; }
+        }
+        .scan-line {
+            animation: scanLine 2s ease-in-out infinite;
         }
     </style>
 </head>
 <body>
-    <h1>ScanLens Logo Variants</h1>
+    <h1>Custom ScanLens Wordmarks</h1>
 
     <div class="grid">
-        <!-- Current -->
+        <!-- 1. Scan line through text -->
         <div class="variant">
-            <div class="variant-label">1. Current (Plus Jakarta Sans)</div>
+            <div class="variant-label">1. Scan Line Effect</div>
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="g1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
-                    <rect width="40" height="40" rx="10" fill="url(#g1)"/>
-                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
-                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="27" cy="27" r="6" fill="white"/><path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g1" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g1)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
-                <span class="logo-text font-jakarta">ScanLens</span>
+                <svg class="wordmark" viewBox="0 0 160 40" fill="none">
+                    <defs>
+                        <clipPath id="textClip1">
+                            <text x="0" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="800">ScanLens</text>
+                        </clipPath>
+                        <linearGradient id="scanGrad" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#0071E3" stop-opacity="0"/>
+                            <stop offset="50%" stop-color="#0071E3"/>
+                            <stop offset="100%" stop-color="#0071E3" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+                    <text x="0" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="800" fill="#1d1d1f">Scan</text>
+                    <text x="62" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="800" fill="#0071E3">Lens</text>
+                    <g clip-path="url(#textClip1)">
+                        <rect class="scan-line" x="0" y="0" width="40" height="40" fill="url(#scanGrad)"/>
+                    </g>
+                </svg>
             </div>
         </div>
 
-        <!-- Inter -->
+        <!-- 2. Lens as O -->
         <div class="variant">
-            <div class="variant-label">2. Inter (Apple-like, clean)</div>
+            <div class="variant-label">2. Geometric + Lens Symbol</div>
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="g2" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
-                    <rect width="40" height="40" rx="10" fill="url(#g2)"/>
-                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
-                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="27" cy="27" r="6" fill="white"/><path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g2" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g2)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
-                <span class="logo-text font-inter weight-800 tracking-tight">ScanLens</span>
+                <svg class="wordmark" viewBox="0 0 170 40" fill="none">
+                    <!-- SCAN in bold geometric -->
+                    <text x="0" y="30" font-family="system-ui" font-size="30" font-weight="800" letter-spacing="-1" fill="#1d1d1f">SCAN</text>
+                    <!-- LENS with circle for e -->
+                    <text x="72" y="30" font-family="system-ui" font-size="30" font-weight="800" letter-spacing="-1" fill="#1d1d1f">L</text>
+                    <circle cx="100" cy="22" r="10" stroke="#0071E3" stroke-width="3" fill="none"/>
+                    <circle cx="100" cy="22" r="4" fill="#0071E3"/>
+                    <text x="114" y="30" font-family="system-ui" font-size="30" font-weight="800" letter-spacing="-1" fill="#1d1d1f">NS</text>
+                </svg>
             </div>
         </div>
 
-        <!-- Outfit -->
+        <!-- 3. Split style -->
         <div class="variant">
-            <div class="variant-label">3. Outfit (Modern geometric)</div>
+            <div class="variant-label">3. Bold Split</div>
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="g3" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
-                    <rect width="40" height="40" rx="10" fill="url(#g3)"/>
-                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
-                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="27" cy="27" r="6" fill="white"/><path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g3" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g3)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
-                <span class="logo-text font-outfit weight-800">ScanLens</span>
+                <svg class="wordmark" viewBox="0 0 180 40" fill="none">
+                    <rect x="0" y="8" width="68" height="28" rx="6" fill="#1d1d1f"/>
+                    <text x="8" y="29" font-family="system-ui" font-size="22" font-weight="800" fill="white">scan</text>
+                    <text x="74" y="31" font-family="system-ui" font-size="28" font-weight="300" fill="#0071E3">lens</text>
+                </svg>
             </div>
         </div>
 
-        <!-- Space Grotesk -->
+        <!-- 4. Stacked -->
         <div class="variant">
-            <div class="variant-label">4. Space Grotesk (Tech/futuristic)</div>
+            <div class="variant-label">4. Stacked Compact</div>
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="g4" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
-                    <rect width="40" height="40" rx="10" fill="url(#g4)"/>
-                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
-                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="27" cy="27" r="6" fill="white"/><path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g4" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g4)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
-                <span class="logo-text font-space">ScanLens</span>
+                <svg class="wordmark" viewBox="0 0 80 44" fill="none">
+                    <text x="0" y="18" font-family="system-ui" font-size="20" font-weight="800" letter-spacing="3" fill="#1d1d1f">SCAN</text>
+                    <text x="0" y="40" font-family="system-ui" font-size="20" font-weight="400" letter-spacing="3" fill="#0071E3">LENS</text>
+                </svg>
             </div>
         </div>
 
-        <!-- Sora -->
+        <!-- 5. Minimal line -->
         <div class="variant">
-            <div class="variant-label">5. Sora (Friendly, modern)</div>
+            <div class="variant-label">5. Underline Accent</div>
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="g5" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
-                    <rect width="40" height="40" rx="10" fill="url(#g5)"/>
-                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
-                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="27" cy="27" r="6" fill="white"/><path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g5" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g5)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
-                <span class="logo-text font-sora weight-800">ScanLens</span>
+                <svg class="wordmark" viewBox="0 0 160 44" fill="none">
+                    <text x="0" y="28" font-family="system-ui" font-size="28" font-weight="700" letter-spacing="-0.5" fill="#1d1d1f">scanlens</text>
+                    <rect x="0" y="36" width="55" height="3" rx="1.5" fill="#0071E3"/>
+                </svg>
             </div>
         </div>
 
-        <!-- Manrope -->
+        <!-- 6. Dot separator -->
         <div class="variant">
-            <div class="variant-label">6. Manrope (Premium feel)</div>
+            <div class="variant-label">6. Dot Separator</div>
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="g6" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
-                    <rect width="40" height="40" rx="10" fill="url(#g6)"/>
-                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
-                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="27" cy="27" r="6" fill="white"/><path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g6" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g6)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
-                <span class="logo-text font-manrope weight-800 tracking-tight">ScanLens</span>
+                <svg class="wordmark" viewBox="0 0 160 40" fill="none">
+                    <text x="0" y="29" font-family="system-ui" font-size="26" font-weight="700" fill="#1d1d1f">scan</text>
+                    <circle cx="66" cy="24" r="4" fill="#0071E3"/>
+                    <text x="78" y="29" font-family="system-ui" font-size="26" font-weight="700" fill="#1d1d1f">lens</text>
+                </svg>
             </div>
         </div>
 
-        <div class="divider">With color accent on "Lens"</div>
-
-        <!-- Inter + Accent -->
+        <!-- 7. Gradient fill -->
         <div class="variant">
-            <div class="variant-label">7. Inter + Blue accent</div>
+            <div class="variant-label">7. Full Gradient</div>
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="g7" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
-                    <rect width="40" height="40" rx="10" fill="url(#g7)"/>
-                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
-                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="27" cy="27" r="6" fill="white"/><path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g7" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g7)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
-                <span class="logo-text font-inter weight-800 tracking-tight">Scan<span class="accent">Lens</span></span>
+                <svg class="wordmark" viewBox="0 0 160 40" fill="none">
+                    <defs>
+                        <linearGradient id="textGrad" x1="0" y1="0" x2="160" y2="0">
+                            <stop offset="0%" stop-color="#0071E3"/>
+                            <stop offset="100%" stop-color="#00C7E3"/>
+                        </linearGradient>
+                    </defs>
+                    <text x="0" y="30" font-family="system-ui" font-size="32" font-weight="800" letter-spacing="-1" fill="url(#textGrad)">ScanLens</text>
+                </svg>
             </div>
         </div>
 
-        <!-- Outfit + Accent -->
-        <div class="variant">
-            <div class="variant-label">8. Outfit + Blue accent</div>
+        <!-- 8. Dark mode -->
+        <div class="variant dark">
+            <div class="variant-label">8. Dark Mode Gradient</div>
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="g8" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
-                    <rect width="40" height="40" rx="10" fill="url(#g8)"/>
-                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
-                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="27" cy="27" r="6" fill="white"/><path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g8" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g8)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
-                <span class="logo-text font-outfit weight-800">Scan<span class="accent">Lens</span></span>
+                <svg class="wordmark" viewBox="0 0 160 40" fill="none">
+                    <defs>
+                        <linearGradient id="textGrad2" x1="0" y1="0" x2="160" y2="0">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="100%" stop-color="#00C7E3"/>
+                        </linearGradient>
+                    </defs>
+                    <text x="0" y="30" font-family="system-ui" font-size="32" font-weight="800" letter-spacing="-1" fill="url(#textGrad2)">ScanLens</text>
+                </svg>
             </div>
         </div>
 
-        <div class="divider">With gradient text</div>
-
-        <!-- Inter + Gradient -->
+        <!-- 9. Brackets -->
         <div class="variant">
-            <div class="variant-label">9. Inter + Gradient</div>
+            <div class="variant-label">9. Code Brackets</div>
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="g9" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
-                    <rect width="40" height="40" rx="10" fill="url(#g9)"/>
-                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
-                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="27" cy="27" r="6" fill="white"/><path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g9" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g9)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
-                <span class="logo-text font-inter weight-800 tracking-tight gradient">ScanLens</span>
+                <svg class="wordmark" viewBox="0 0 180 40" fill="none">
+                    <text x="0" y="30" font-family="ui-monospace, monospace" font-size="28" font-weight="600" fill="#0071E3">[</text>
+                    <text x="14" y="30" font-family="system-ui" font-size="28" font-weight="700" fill="#1d1d1f">scan</text>
+                    <text x="73" y="30" font-family="system-ui" font-size="28" font-weight="700" fill="#0071E3">lens</text>
+                    <text x="130" y="30" font-family="ui-monospace, monospace" font-size="28" font-weight="600" fill="#0071E3">]</text>
+                </svg>
             </div>
         </div>
 
-        <!-- Manrope + Gradient -->
+        <!-- 10. Slash separator -->
         <div class="variant">
-            <div class="variant-label">10. Manrope + Gradient</div>
+            <div class="variant-label">10. Slash Divider</div>
             <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="g10" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
-                    <rect width="40" height="40" rx="10" fill="url(#g10)"/>
-                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
-                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="27" cy="27" r="6" fill="white"/><path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g10" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g10)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
-                <span class="logo-text font-manrope weight-800 tracking-tight gradient">ScanLens</span>
+                <svg class="wordmark" viewBox="0 0 170 40" fill="none">
+                    <text x="0" y="29" font-family="system-ui" font-size="26" font-weight="800" fill="#1d1d1f">SCAN</text>
+                    <text x="68" y="32" font-family="system-ui" font-size="32" font-weight="300" fill="#0071E3">/</text>
+                    <text x="84" y="29" font-family="system-ui" font-size="26" font-weight="400" fill="#0071E3">lens</text>
+                </svg>
             </div>
         </div>
+
+        <!-- 11. Circle S -->
+        <div class="variant">
+            <div class="variant-label">11. Circle Initial</div>
+            <div class="logo">
+                <svg class="wordmark" viewBox="0 0 200 44" fill="none">
+                    <circle cx="22" cy="22" r="20" fill="#0071E3"/>
+                    <text x="14" y="30" font-family="system-ui" font-size="24" font-weight="800" fill="white">S</text>
+                    <text x="50" y="30" font-family="system-ui" font-size="28" font-weight="700" fill="#1d1d1f">canLens</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- 12. Minimal icon-text -->
+        <div class="variant">
+            <div class="variant-label">12. Tight Lowercase</div>
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+                    <defs><linearGradient id="g12" x1="0" y1="0" x2="44" y2="44"><stop stop-color="#0071E3"/><stop offset="1" stop-color="#00C7E3"/></linearGradient></defs>
+                    <rect width="44" height="44" rx="11" fill="url(#g12)"/>
+                    <rect x="10" y="10" width="18" height="22" rx="3" fill="white" fill-opacity="0.9"/>
+                    <path d="M14 16H24M14 20H22M14 24H18" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="8" fill="white"/><path d="M32 28V36M28 32H36" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <svg class="wordmark" viewBox="0 0 140 40" fill="none">
+                    <text x="0" y="30" font-family="system-ui" font-size="30" font-weight="600" letter-spacing="-2" fill="#1d1d1f">scanlens</text>
+                </svg>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
