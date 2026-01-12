@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ScanLens Document Scanner App</title>
+    <meta name="description" content="ScanLens Privacy Policy. Learn how we collect, use, and protect your data when using our document scanner app.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://scanlens.app/privacy.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #0071E3;
+            --color-text: #1d1d1f;
+            --color-text-secondary: #6e6e73;
+            --color-bg: #f5f5f7;
+            --color-white: #ffffff;
+            --nav-height: 64px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-height);
+            background: rgba(245, 245, 247, 0.9);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .nav-back {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-back:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: calc(var(--nav-height) + 60px) 24px 80px;
+        }
+
+        .legal-header {
+            margin-bottom: 48px;
+        }
+
+        .legal-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--color-text);
+        }
+
+        .legal-meta {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .legal-content {
+            background: var(--color-white);
+            border-radius: 20px;
+            padding: 48px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .legal-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 40px 0 16px;
+            color: var(--color-text);
+        }
+
+        .legal-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 28px 0 12px;
+            color: var(--color-text);
+        }
+
+        .legal-content p {
+            margin-bottom: 16px;
+            color: var(--color-text-secondary);
+        }
+
+        .legal-content ul {
+            margin: 16px 0;
+            padding-left: 24px;
+            color: var(--color-text-secondary);
+        }
+
+        .legal-content li {
+            margin-bottom: 8px;
+        }
+
+        .legal-content a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+
+        .company-info {
+            background: var(--color-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 32px;
+        }
+
+        .company-info h3 {
+            margin-top: 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px) {
+            .legal-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .legal-content {
+                padding: 32px 24px;
+            }
+
+            .legal-content h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+                    <path d="M12 14C12 12.8954 12.8954 12 14 12H26C27.1046 12 28 12.8954 28 14V26C28 27.1046 27.1046 28 26 28H14C12.8954 28 12 27.1046 12 26V14Z" fill="white" fill-opacity="0.9"/>
+                    <path d="M15 18H25M15 22H21" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="27" cy="27" r="6" fill="white"/>
+                    <path d="M27 24V30M24 27H30" stroke="#0071E3" stroke-width="2" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40">
+                            <stop stop-color="#0071E3"/>
+                            <stop offset="1" stop-color="#00C7E3"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>ScanLens</span>
+            </a>
+            <a href="index.html" class="nav-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="legal-header">
+            <h1>Privacy Policy</h1>
+            <p class="legal-meta">Effective Date: January 1, 2025 | Last Updated: January 11, 2025</p>
+        </header>
+
+        <article class="legal-content">
+            <h2>1. Introduction</h2>
+            <p>Welcome to ScanLens ("we," "our," or "us"). This Privacy Policy explains how BITFORGE PTE. LTD. collects, uses, discloses, and safeguards your information when you use our ScanLens mobile application (the "App").</p>
+            <p>By using ScanLens, you agree to the collection and use of information in accordance with this policy. If you do not agree with our policies and practices, please do not use the App.</p>
+
+            <h2>2. Information We Collect</h2>
+
+            <h3>2.1 Information You Provide</h3>
+            <ul>
+                <li><strong>Account Information:</strong> Email address and password when you create an account</li>
+                <li><strong>User Content:</strong> Documents, images, and files you scan or upload through the App</li>
+                <li><strong>Signatures:</strong> Digital signatures you create within the App</li>
+                <li><strong>Payment Information:</strong> Billing details for premium subscriptions (processed securely through Apple App Store)</li>
+            </ul>
+
+            <h3>2.2 Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Device Information:</strong> Device type, operating system version, unique device identifiers</li>
+                <li><strong>Usage Data:</strong> Features used, scan frequency, app interactions</li>
+                <li><strong>Log Data:</strong> Access times, error logs, and diagnostic information</li>
+            </ul>
+
+            <h3>2.3 Camera and Photo Library Access</h3>
+            <p>ScanLens requires access to your device's camera and photo library to scan documents. We only access these features when you actively use the scanning functionality. Images are processed locally on your device unless you choose to use cloud features.</p>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide, maintain, and improve the App's functionality</li>
+                <li>Process and complete document scans and OCR text recognition</li>
+                <li>Sync your documents across devices (if you enable cloud sync)</li>
+                <li>Process subscription payments and manage your account</li>
+                <li>Send important updates about the App and your account</li>
+                <li>Analyze usage patterns to improve user experience</li>
+                <li>Detect and prevent fraud, abuse, or security issues</li>
+                <li>Comply with legal obligations</li>
+            </ul>
+
+            <h2>4. Data Storage and Security</h2>
+            <p>We implement industry-standard security measures to protect your data:</p>
+            <ul>
+                <li><strong>Local Processing:</strong> Document scanning and OCR processing occur primarily on your device</li>
+                <li><strong>Encryption:</strong> All data transmitted to our servers is encrypted using TLS 1.3</li>
+                <li><strong>Secure Storage:</strong> Cloud-stored documents are encrypted at rest using AES-256 encryption</li>
+                <li><strong>Access Controls:</strong> Strict access controls limit who can access user data</li>
+            </ul>
+
+            <h2>5. Data Sharing and Disclosure</h2>
+            <p>We do not sell your personal information. We may share your information only in the following circumstances:</p>
+            <ul>
+                <li><strong>Service Providers:</strong> With trusted third parties who assist in operating our App (cloud hosting, analytics)</li>
+                <li><strong>Legal Requirements:</strong> When required by law, court order, or government request</li>
+                <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
+                <li><strong>With Your Consent:</strong> When you explicitly authorize sharing</li>
+            </ul>
+
+            <h2>6. Your Rights and Choices</h2>
+            <p>You have the following rights regarding your data:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of your personal data</li>
+                <li><strong>Correction:</strong> Update or correct inaccurate information</li>
+                <li><strong>Deletion:</strong> Request deletion of your data and account</li>
+                <li><strong>Export:</strong> Download your documents in standard formats</li>
+                <li><strong>Opt-out:</strong> Disable analytics and optional data collection in App settings</li>
+            </ul>
+            <p>To exercise these rights, contact us at <a href="mailto:support@bitforge.cloud">support@bitforge.cloud</a>.</p>
+
+            <h2>7. Data Retention</h2>
+            <p>We retain your data for as long as your account is active or as needed to provide services. After account deletion:</p>
+            <ul>
+                <li>Personal data is deleted within 30 days</li>
+                <li>Backup copies are purged within 90 days</li>
+                <li>Some anonymized analytics data may be retained for service improvement</li>
+            </ul>
+
+            <h2>8. Children's Privacy</h2>
+            <p>ScanLens is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately at <a href="mailto:support@bitforge.cloud">support@bitforge.cloud</a>, and we will take steps to delete such information.</p>
+
+            <h2>9. International Data Transfers</h2>
+            <p>Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place for international transfers in compliance with applicable data protection laws.</p>
+
+            <h2>10. Third-Party Services</h2>
+            <p>The App may integrate with third-party services:</p>
+            <ul>
+                <li><strong>Cloud Storage:</strong> iCloud, Google Drive, Dropbox (governed by their respective privacy policies)</li>
+                <li><strong>Payment Processing:</strong> Apple App Store (governed by Apple's policies)</li>
+                <li><strong>Analytics:</strong> We use privacy-focused analytics to improve the App</li>
+            </ul>
+
+            <h2>11. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by:</p>
+            <ul>
+                <li>Posting the new policy in the App</li>
+                <li>Updating the "Last Updated" date</li>
+                <li>Sending an email notification for significant changes</li>
+            </ul>
+
+            <h2>12. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or our data practices, please contact us:</p>
+
+            <div class="company-info">
+                <h3>BITFORGE PTE. LTD.</h3>
+                <p>
+                    10 ANSON ROAD, #20-05<br>
+                    INTERNATIONAL PLAZA<br>
+                    SINGAPORE 079903
+                </p>
+                <p>
+                    <strong>Email:</strong> <a href="mailto:support@bitforge.cloud">support@bitforge.cloud</a><br>
+                    <strong>DUNS:</strong> 659154053
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 BITFORGE PTE. LTD. All rights reserved.</p>
+        <p><a href="index.html">Home</a> | <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
