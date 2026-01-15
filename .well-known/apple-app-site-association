@@ -1,0 +1,20 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "UDPYWUZSSG.app.scanlens.ios",
+        "paths": [
+          "/auth/*",
+          "/auth/callback",
+          "/auth/callback/*"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "UDPYWUZSSG.app.scanlens.ios"
+    ]
+  }
+}

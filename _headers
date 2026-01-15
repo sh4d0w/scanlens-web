@@ -1,0 +1,10 @@
+# Headers for Cloudflare Pages
+# Ensures AASA file is served with correct Content-Type
+
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *
+  Cache-Control: max-age=3600
+
+/.well-known/*
+  Content-Type: application/json

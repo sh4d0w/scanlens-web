@@ -1,0 +1,5 @@
+# Cloudflare Pages Redirects
+# Serve callback.html for /auth/callback path
+
+/auth/callback    /auth/callback.html    200
+/auth/callback/*  /auth/callback.html    200
