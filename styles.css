@@ -564,10 +564,11 @@ button {
     animation: heroIconEnter 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
-.hero-app-icon svg {
+.hero-app-icon img {
     width: 80px;
     height: 80px;
-    filter: drop-shadow(0 8px 24px rgba(0, 113, 227, 0.3));
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
 }
 
 @keyframes heroIconEnter {
