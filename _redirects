@@ -1,3 +1,21 @@
 # Cloudflare Pages Redirects
 # Auth callback wildcard - pass query params to the page
 /auth/callback/*  /auth/callback/  200
+
+# Clean URLs for landing pages
+/pdf-scanner-app  /pdf-scanner-app.html  200
+/document-scanner-iphone  /document-scanner-iphone.html  200
+/ocr-app  /ocr-app.html  200
+/how-to-scan-documents-iphone  /how-to-scan-documents-iphone.html  200
+/scan-handwriting-to-text  /scan-handwriting-to-text.html  200
+/digitize-paper-documents  /digitize-paper-documents.html  200
+/sign-pdf-iphone  /sign-pdf-iphone.html  200
+/scan-receipts-app  /scan-receipts-app.html  200
+/business-document-scanner  /business-document-scanner.html  200
+/student-document-scanner  /student-document-scanner.html  200
+/scanner-app-comparison  /scanner-app-comparison.html  200
+/free-pdf-scanner  /free-pdf-scanner.html  200
+
+# Legacy redirects
+/privacy  /privacy.html  200
+/terms  /terms.html  200
