@@ -5,11 +5,12 @@
 
 /* CSS Custom Properties */
 :root {
-    /* Colors - Apple-inspired palette */
-    --color-primary: #0071E3;
-    --color-primary-dark: #0058B3;
-    --color-primary-light: #40A0FF;
-    --color-accent: #00D4E3;
+    /* Colors - Purple-Pink brand palette (matches app icon) */
+    --color-primary: #8B5CF6;
+    --color-primary-dark: #7C3AED;
+    --color-primary-light: #A78BFA;
+    --color-accent: #EC4899;
+    --color-accent-dark: #DB2777;
 
     --color-text: #1d1d1f;
     --color-text-secondary: #86868b;
@@ -367,7 +368,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #E8F4FD, #D1E9FC);
+    background: linear-gradient(135deg, #F3E8FF, #FCE7F3);
     border-radius: var(--radius-md);
     color: var(--color-primary);
 }
@@ -824,7 +825,7 @@ button {
     justify-content: center;
     border-radius: var(--radius-lg);
     margin-bottom: var(--space-5);
-    background: linear-gradient(135deg, #E8F4FD, #D1E9FC);
+    background: linear-gradient(135deg, #F3E8FF, #FCE7F3);
     color: var(--color-primary);
 }
 
@@ -1407,7 +1408,7 @@ button {
    ============================================ */
 .cta {
     padding: var(--space-24) 0;
-    background: linear-gradient(135deg, var(--color-primary), #0058B3);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
 }
 
 .cta-content {
