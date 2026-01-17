@@ -643,13 +643,13 @@ button {
 .btn-primary {
     color: white;
     background: var(--color-primary);
-    box-shadow: 0 4px 14px rgba(0, 113, 227, 0.35);
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
 }
 
 .btn-primary:hover {
     background: var(--color-primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 113, 227, 0.4);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
 }
 
 .btn-secondary {
@@ -768,7 +768,7 @@ button {
     font-size: var(--font-size-sm);
     font-weight: 600;
     color: var(--color-primary);
-    background: rgba(0, 113, 227, 0.08);
+    background: rgba(139, 92, 246, 0.08);
     border-radius: var(--radius-full);
     margin-bottom: var(--space-4);
 }
@@ -954,7 +954,7 @@ button {
     right: 12px;
     height: 3px;
     background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
-    box-shadow: 0 0 20px rgba(0, 113, 227, 0.5);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
     animation: scanBeam 3s ease-in-out infinite;
 }
 
@@ -995,7 +995,7 @@ button {
     font-size: var(--font-size-lg);
     font-weight: 700;
     color: var(--color-primary);
-    background: rgba(0, 113, 227, 0.1);
+    background: rgba(139, 92, 246, 0.1);
     border-radius: var(--radius-full);
     margin-bottom: var(--space-6);
 }
