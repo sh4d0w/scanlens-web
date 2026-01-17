@@ -1,5 +1,3 @@
 # Cloudflare Pages Redirects
-# Serve callback.html for /auth/callback path
-
-/auth/callback    /auth/callback.html    200
-/auth/callback/*  /auth/callback.html    200
+# Auth callback wildcard - pass query params to the page
+/auth/callback/*  /auth/callback/  200
