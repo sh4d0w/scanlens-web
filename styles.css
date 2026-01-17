@@ -1408,7 +1408,7 @@ button {
    ============================================ */
 .cta {
     padding: var(--space-24) 0;
-    background: linear-gradient(135deg, #0c0a1d 0%, #1a1440 50%, #2e1065 100%);
+    background: linear-gradient(135deg, #12051a 0%, #2e0f42 50%, #521d6e 100%);
 }
 
 .cta-content {
