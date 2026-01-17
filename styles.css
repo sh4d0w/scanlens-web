@@ -1540,11 +1540,7 @@ button {
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.03em;
-    color: var(--color-text);
     margin-bottom: var(--space-4);
-}
-
-.landing-title span {
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
