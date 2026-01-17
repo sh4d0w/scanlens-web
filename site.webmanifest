@@ -4,17 +4,22 @@
   "description": "Document scanner app for iPhone with PDF export, OCR text recognition, and e-signatures.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f5f5f7",
-  "theme_color": "#0071E3",
+  "background_color": "#1a1a2e",
+  "theme_color": "#8B5CF6",
   "icons": [
     {
-      "src": "favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
     },
     {
       "src": "apple-touch-icon.png",
       "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "images/app-icon-1024.png",
+      "sizes": "1024x1024",
       "type": "image/png"
     }
   ]
