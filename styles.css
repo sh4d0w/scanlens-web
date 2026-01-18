@@ -1446,7 +1446,7 @@ button {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     gap: var(--space-12);
     margin-bottom: var(--space-12);
 }
